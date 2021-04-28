@@ -1,0 +1,35 @@
+version: 2
+updates:
+- package-ecosystem: pip
+  directory: "/"
+  schedule:
+    interval: weekly
+  open-pull-requests-limit: 10
+  labels:
+  - 03 - Maintenance
+  ignore:
+  - dependency-name: hypothesis
+    versions:
+    - 6.0.3
+    - 6.1.1
+    - 6.2.0
+    - 6.3.0
+    - 6.3.4
+    - 6.6.0
+    - 6.8.1
+    - 6.8.3
+    - 6.8.4
+    - 6.9.1
+  - dependency-name: cython
+    versions:
+    - 0.29.21
+    - 0.29.22
+  - dependency-name: pytest
+    versions:
+    - 6.2.1
+    - 6.2.2
+  - dependency-name: pytz
+    versions:
+    - "2020.5"
+  commit-message:
+    prefix: MAINT
